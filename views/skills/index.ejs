@@ -1,11 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Express-Skills</title>
-</head>
-<body>
-    <h1>Skills</h1>
-</body>
-</html>
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<h1>Skills Page</h1>
+<% skills.forEach((s)=>{ %>
+    <div class="container">
+    <table class="table table-bordered my-3 py-3">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Avatar</th>
+                <th scope="col">Name</th>
+                <th scope="col">Skills</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><a href="/skills/<%=s.id%>"><%= s.id%></a></th>
+                <td><img  style="height: 10vh;"src=<%=s.image%> alt="<%=s.name%>"></td>
+                <td><%= s.name%></td>
+                <td><%= s.skill%></td>
+            </tr>
+            <%})%>
+        </tbody>
+    </table>
+    </div>
+<%- include('../partials/footer') %>
