@@ -34,6 +34,11 @@ const edit = (req,res) =>{
     })
 }
 
+const update = (req,res)=>{
+    Skill.update(req.params.id, req.body);
+    res.redirect(`/skills/${req.params.id}`);
+}
+
 
 const deleteSkill = (req,res)=>{
     Skill.deleteOne(req.params.id);
@@ -48,5 +53,6 @@ module.exports = {
     new: newSkill,
     create,
     delete: deleteSkill,
-    edit
+    edit,
+    update
 }

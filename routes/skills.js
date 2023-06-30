@@ -21,7 +21,7 @@ router.post('/', skillsCtrl.create);
 // DELETE - /:id
 router.delete('/:id',skillsCtrl.delete);
 // PUT -> /skills/:id
-// router.put()
+router.put('/:id',skillsCtrl.update);
 
 
 module.exports = router;

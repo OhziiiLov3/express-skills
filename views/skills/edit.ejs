@@ -5,12 +5,12 @@
 
 
 <div class="mx-auto col-8 col-md-8 col-lg-6">
-    <form action="/skills/<%=skill.id%>?_method=PUT" method="POST" autocomplete="off">
+    <form action="/skills/<%=skill.id %>?_method=PUT" method="POST" autocomplete="off">
 
   <label  class="form-label" style="font-size: 2vmin;"> Edit Skills</label>
-  <input class="form-control my-2" type="text" name="name" placeholder="Name" >
-  <input class="form-control my-2" type="text" name="image" placeholder="Avatar" >
-  <input class="form-control my-2" type="text" name="skill" placeholder="Skills" >
+  <input class="form-control my-2" type="text" name="name" value="<%=skill.name%>" >
+  <input class="form-control my-2" type="text" name="image" value="<%=skill.image%>" >
+  <input class="form-control my-2" type="text" name="skill" value="<%=skill.skill%> " >
   <button class="btn btn-primary my-3 px-4" type="submit">Update Skill</button>
     </form>
 </div>
