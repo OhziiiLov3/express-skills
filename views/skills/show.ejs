@@ -2,10 +2,11 @@
 <%- include('../partials/header') %>
 
 
-<h1>Show Page</h1>
+<h1 class="mx-4">Show Page</h1>
 <div class="container">
-        <h3><%= skill.name %></h3>
-        <p>Complete: <strong> <%= skill.skill %></strong></p>
-    </div>
-    <a  class="btn btn-primary" href="/skills">Go Back</a>
+    <h3><%= skill.name %></h3>
+    <p>Complete: <strong> <%= skill.skill %></strong></p>
+    <a href="/skills/<%=skill.id%>/edit" class="btn btn-outline-warning px-3">Edit</a>
+</div>
+<a  class="btn btn-primary m-2 px-3" href="/skills">Go Back</a>
 <%- include('../partials/footer') %>

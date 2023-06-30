@@ -26,6 +26,15 @@ const create = (req,res)=>{
     res.redirect('/skills')
 }
 
+const edit = (req,res) =>{
+    const skill = Skill.getOne(req.params.id)
+    res.render('skills/edit',{
+        title: 'Edit skill',
+        skill: skill
+    })
+}
+
+
 const deleteSkill = (req,res)=>{
     Skill.deleteOne(req.params.id);
     res.redirect('/skills');
@@ -39,4 +48,5 @@ module.exports = {
     new: newSkill,
     create,
     delete: deleteSkill,
+    edit
 }

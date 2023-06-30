@@ -12,12 +12,16 @@ router.get('/', skillsCtrl.index);
 router.get('/new',skillsCtrl.new);
 // GET-Show Skill detials(single data source) /skills/:id
 router.get('/:id', skillsCtrl.show);
+// GET - EDIT -> /skills/:id/edit
+router.get('/:id/edit',skillsCtrl.edit);
 
 
 // POST - /skills
 router.post('/', skillsCtrl.create);
 // DELETE - /:id
 router.delete('/:id',skillsCtrl.delete);
+// PUT -> /skills/:id
+// router.put()
 
 
 module.exports = router;
