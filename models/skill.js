@@ -40,6 +40,10 @@ module.exports = {
         id = parseInt(id);
         return skills.find(skill => skill.id === id)
     },
+    create: (skill)=>{
+      skill.id = Date.now() % 100000;
+      skills.push(skill)
+    }
     
 };
 
