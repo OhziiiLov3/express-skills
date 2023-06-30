@@ -1,10 +1,11 @@
 <%- include('../partials/head') %>
 <%- include('../partials/header') %>
 
-<h1>Skills Page</h1>
+<div class="container">
+<h1 class="text-center my-2 p-2">See All Skills</h1>
+<a class="btn btn-info my-2 p-2" href="/">Go Back</a>
 <% skills.forEach((s)=>{ %>
-    <div class="container">
-    <table class="table table-bordered my-3 py-3">
+    <table class="table table-bordered">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">#</th>
@@ -23,5 +24,8 @@
             <%})%>
         </tbody>
     </table>
+    <div class="text-center">
+        <a class="btn btn-outline-success my-2 p-2" href="/skills/new">Add Skill</a>
+    </div>
     </div>
 <%- include('../partials/footer') %>

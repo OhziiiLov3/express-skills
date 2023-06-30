@@ -6,6 +6,14 @@ const index = (req,res) =>{
     })
 }
 
+
+const newSkill = (req,res)=>{
+    res.render('skills/new',{
+        title: 'New Todo'
+    })
+}
+
+
 const show = (req,res) =>{
     res.render('skills/show',{
         skill: Skill.getOne(req.params.id)
@@ -14,7 +22,9 @@ const show = (req,res) =>{
 
 
 
+
 module.exports = {
     index,
     show,
+    new: newSkill,
 }

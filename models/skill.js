@@ -39,7 +39,8 @@ module.exports = {
     getOne: (id)=>{
         id = parseInt(id);
         return skills.find(skill => skill.id === id)
-    }
+    },
+    
 };
 
 
