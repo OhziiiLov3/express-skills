@@ -12,6 +12,7 @@
                 <th scope="col">Avatar</th>
                 <th scope="col">Name</th>
                 <th scope="col">Skills</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,11 @@
                 <td><img  style="height: 10vh;"src=<%=s.image%> alt="<%=s.name%>"></td>
                 <td><%= s.name%></td>
                 <td><%= s.skill%></td>
+                <td>
+        <form action="/skills/<%=s.id%>?_method=DELETE" class="delete-form my-2 p-2" method="POST">
+            <button class="btn btn-danger">Delete</button>
+          </form>
+        </td>
             </tr>
             <%})%>
         </tbody>

@@ -43,6 +43,12 @@ module.exports = {
     create: (skill)=>{
       skill.id = Date.now() % 100000;
       skills.push(skill)
+    },
+    deleteOne: (id) =>{
+      id = parseInt(id);
+      const idx = skills.findIndex((skill) => skill.id === id);
+      skills.splice(idx,1)
+      
     }
     
 };

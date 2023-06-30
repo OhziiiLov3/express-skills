@@ -26,6 +26,10 @@ const create = (req,res)=>{
     res.redirect('/skills')
 }
 
+const deleteSkill = (req,res)=>{
+    Skill.deleteOne(req.params.id);
+    res.redirect('/skills');
+}
 
 
 
@@ -34,4 +38,5 @@ module.exports = {
     show,
     new: newSkill,
     create,
+    delete: deleteSkill,
 }
